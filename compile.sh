@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -a DIRS=(src/)
+declare -a DIRS=(src/grep/)
 
 for file in ${DIRS[@]}
 do

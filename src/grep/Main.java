@@ -1,12 +1,12 @@
+package grep;
+
 import grep.*;
 
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-
     static Scanner userInput = new Scanner(System.in);
-
     public static void main(String[] args) {
         do {
             int choice = menu();
