@@ -1,8 +1,6 @@
 #!/bin/bash
 
-declare -a DIRS=(
-    src/
-)
+declare -a DIRS=(src/)
 
 for DIR in ${DIRS[@]}
 do
