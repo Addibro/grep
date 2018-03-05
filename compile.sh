@@ -2,7 +2,7 @@
 
 declare -a DIRS=(src/)
 
-for DIR in ${DIRS[@]}
+for file in ${DIRS[@]}
 do
-    javac ${DIR}*.java
+    javac ${file}*.java
 done
