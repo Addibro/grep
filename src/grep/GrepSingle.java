@@ -1,13 +1,13 @@
+package grep;
+
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.*;
 
 /**
  * Single threaded class for searching
  */
 public class GrepSingle {
-    public static void main(String[] args) throws InterruptedException, IOException {
+    public static void run(String pattern, String file) throws InterruptedException, IOException {
 
         // count milli secs
         long startTime;
@@ -18,12 +18,12 @@ public class GrepSingle {
         List<Line> allLines = null;
 
         // check correct arguments
-        if (args.length > 3 || args.length < 2) {
+        if (pattern.equals("") || file.equals("")) {
             System.out.println("Arguments should be: pattern fileName");
         } else {
-            reader = new Reader(args[1]);
+            reader = new Reader(file);
             allLines = reader.getContentLines();
-            grep1 = new Grep(args[0], allLines);
+            grep1 = new Grep(pattern, allLines);
         }
 
         Thread thread = new Thread(grep1);

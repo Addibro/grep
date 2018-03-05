@@ -1,3 +1,5 @@
+package grep;
+
 /**
  * Represents a line with a corresponding string
  */
@@ -20,6 +22,6 @@ public class Line {
 
     @Override
     public String toString() {
-        return "Line " + number + ": " + line;
+        return "grep.Line " + number + ": " + line;
     }
 }
